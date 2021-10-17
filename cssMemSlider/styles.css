@@ -2,6 +2,29 @@
   margin: 0 auto;
 }
 
+input {
+  display: none;
+}
+
+.labels {
+  display: flex;
+}
+
+.slider-label {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+.slider-label span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 25% auto;
+  border-radius: 50%;
+}
+
 .slides-container {
   width: 300px;
   overflow: hidden;
@@ -69,4 +92,24 @@
 
 .slider-point-5:checked ~ .slides-text-container > .slides-text-list {
   transform: translateY(-400px);
+}
+
+.slider-point-1:checked ~ .labels > .slider-label:first-child span {
+  background-color: plum;
+}
+
+.slider-point-2:checked ~ .labels > .slider-label:nth-child(2) span {
+  background-color: plum;
+}
+
+.slider-point-3:checked ~ .labels > .slider-label:nth-child(3) span {
+  background-color: plum;
+}
+
+.slider-point-4:checked ~ .labels > .slider-label:nth-child(4) span {
+  background-color: plum;
+}
+
+.slider-point-5:checked ~ .labels > .slider-label:last-child span {
+  background-color: plum;
 }
