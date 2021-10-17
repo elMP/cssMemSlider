@@ -36,7 +36,7 @@ input {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  background-color: aqua;
+  border: 0.2rem solid black;  
 }
 
 .slider-label span {
@@ -45,6 +45,20 @@ input {
   height: 0.7rem;
   margin: 25% auto;
   border-radius: 50%;
+}
+
+.slider-label:hover {
+  cursor: pointer;
+  border-color: darkgrey;
+}
+
+.slider-label:active {
+  cursor: pointer;
+  background: darkgrey;
+}
+
+.slider-label:hover span {
+  background: darkgrey;
 }
 
 .slides-container {
@@ -68,7 +82,7 @@ input {
 }
 
 .slides-text-container {
-  width: 50%;
+  width: 60%;
   height: 5rem;
   overflow: hidden;
 }
@@ -126,23 +140,23 @@ input {
 }
 
 .slider-point-1:checked ~ .labels > .slider-label:first-child span {
-  background-color: plum;
+  background-color: black;
 }
 
 .slider-point-2:checked ~ .labels > .slider-label:nth-child(2) span {
-  background-color: plum;
+  background-color: black;
 }
 
 .slider-point-3:checked ~ .labels > .slider-label:nth-child(3) span {
-  background-color: plum;
+  background-color: black;
 }
 
 .slider-point-4:checked ~ .labels > .slider-label:nth-child(4) span {
-  background-color: plum;
+  background-color: black;
 }
 
 .slider-point-5:checked ~ .labels > .slider-label:last-child span {
-  background-color: plum;
+  background-color: black;
 }
 
 @media (min-width: 1200px) {
