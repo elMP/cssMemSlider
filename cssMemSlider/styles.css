@@ -1,0 +1,221 @@
+html {
+  font-size: 16px;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10%;
+  row-gap: 20%;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  display: none;
+}
+
+.labels {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  column-gap: 3%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.slider-label {
+  padding: 0.5rem;
+}
+
+.slider-label .slider-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+}
+
+.slider-label span {
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 25% auto;
+  border-radius: 50%;
+}
+
+.slider-label:hover {
+  cursor: pointer;  
+}
+
+.slider-label:hover .slider-button {
+  border-color: darkgrey;
+}
+
+.slider-label:active {
+  cursor: pointer;  
+}
+
+.slider-label:active .slider-button {
+  background: darkgrey;
+}
+
+.slider-label:hover span {
+  background: darkgrey;
+}
+
+.slides-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides-list {
+  display: flex;
+  transition: transform 0.5s ease-in;
+  align-items: center;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 80%;
+}
+
+.slides-text-container {
+  width: 60%;
+  height: 5rem;
+  overflow: hidden;
+}
+
+.slides-text-list {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in;
+}
+
+.text-slide {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.text-slide div {
+  width: 100%;
+  text-align: center;
+}
+
+.slider-point-1:checked ~ .slides-container > .slides-list {
+  transform: translateX(0%);
+}
+
+.slider-point-2:checked ~ .slides-container > .slides-list {
+  transform: translateX(-100%);
+}
+
+.slider-point-3:checked ~ .slides-container > .slides-list {
+  transform: translateX(-200%);
+}
+
+.slider-point-4:checked ~ .slides-container > .slides-list {
+  transform: translateX(-300%);
+}
+
+.slider-point-5:checked ~ .slides-container > .slides-list {
+  transform: translateX(-400%);
+}
+
+.slider-point-1:checked ~ .slides-text-container > .slides-text-list {
+  transform: translateY(0rem);
+}
+
+.slider-point-2:checked ~ .slides-text-container > .slides-text-list {
+  transform: translateY(-5rem);
+}
+
+.slider-point-3:checked ~ .slides-text-container > .slides-text-list {
+  transform: translateY(-10rem);
+}
+
+.slider-point-4:checked ~ .slides-text-container > .slides-text-list {
+  transform: translateY(-15rem);
+}
+
+.slider-point-5:checked ~ .slides-text-container > .slides-text-list {
+  transform: translateY(-20rem);
+}
+
+.slider-point-1:checked ~ .labels > .slider-label:first-child span {
+  background-color: black;
+}
+
+.slider-point-2:checked ~ .labels > .slider-label:nth-child(2) span {
+  background-color: black;
+}
+
+.slider-point-3:checked ~ .labels > .slider-label:nth-child(3) span {
+  background-color: black;
+}
+
+.slider-point-4:checked ~ .labels > .slider-label:nth-child(4) span {
+  background-color: black;
+}
+
+.slider-point-5:checked ~ .labels > .slider-label:last-child span {
+  background-color: black;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .labels {
+    order: 5;
+  }
+}
+
+@media (max-width: 800px) {  
+  .slides-text-container {
+    width: 100%;
+    min-height: 10rem;
+    text-align: center;
+  }
+
+  .text-slide {
+    min-height: 10rem;
+  }
+
+   .text-slide div {
+     width: 100%;
+   }
+
+  .slider-point-1:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(0rem);
+  }
+
+  .slider-point-2:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-10rem);
+  }
+
+  .slider-point-3:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-20rem);
+  }
+
+  .slider-point-4:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-30rem);
+  }
+
+  .slider-point-5:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-40rem);
+  }
+}
