@@ -33,10 +33,14 @@ input {
 }
 
 .slider-label {
+  padding: 0.5rem;
+}
+
+.slider-label .slider-button {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  border: 0.2rem solid black;  
+  border: 0.2rem solid black;
 }
 
 .slider-label span {
@@ -48,12 +52,18 @@ input {
 }
 
 .slider-label:hover {
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+.slider-label:hover .slider-button {
   border-color: darkgrey;
 }
 
 .slider-label:active {
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+.slider-label:active .slider-button {
   background: darkgrey;
 }
 
@@ -93,10 +103,15 @@ input {
   transition: transform 0.5s ease-in;
 }
 
-.text-slide{
+.text-slide {
   min-height: 5rem;
   display: flex;
   align-items: center;
+}
+
+.text-slide div {
+  width: 100%;
+  text-align: center;
 }
 
 .slider-point-1:checked ~ .slides-container > .slides-list {
@@ -166,5 +181,41 @@ input {
 
   .labels {
     order: 5;
+  }
+}
+
+@media (max-width: 800px) {  
+  .slides-text-container {
+    width: 100%;
+    min-height: 10rem;
+    text-align: center;
+  }
+
+  .text-slide {
+    min-height: 10rem;
+  }
+
+   .text-slide div {
+     width: 100%;
+   }
+
+  .slider-point-1:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(0rem);
+  }
+
+  .slider-point-2:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-10rem);
+  }
+
+  .slider-point-3:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-20rem);
+  }
+
+  .slider-point-4:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-30rem);
+  }
+
+  .slider-point-5:checked ~ .slides-text-container > .slides-text-list {
+    transform: translateY(-40rem);
   }
 }
